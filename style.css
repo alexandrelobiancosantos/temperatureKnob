@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
     padding: 0;
@@ -25,7 +25,8 @@ section {
     width: 320px;
     background-image: linear-gradient(135deg, #ffffff, #eef0f7);
     border-radius: 36px;
-    box-shadow: -16px -16px 24px rgba(255, 255, 255, 0.3), 16px 16px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: -16px -16px 24px rgba(255, 255, 255, 0.3),
+                 16px  16px 24px rgba(0,   0,   0,  0.08);
 }
 
 .container {
@@ -46,11 +47,11 @@ section {
 }
 
 .header span:before {
-    content:'';
+    content: '';
     position: absolute;
     height: 6px;
     width: 6px;
-    top: calc(-50% - 3px);
+    top: calc(50% - 3px);
     left: 0;
     border-radius: 50%;
     background-color: #9dfbcd;
@@ -59,7 +60,6 @@ section {
 .header input {
     position: absolute;
     visibility: hidden;
-
 }
 
 .header label {
@@ -69,4 +69,74 @@ section {
     cursor: pointer;
     height: 32px;
     width: 32px;
+    background-image: linear-gradient(135deg, #f0f1fa, #ffffff);
+    border-radius: 50%;
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.08), -4px -4px 4px #ffffff;
+    transition: all linear 0.5s;
+}
+
+.header input:checked + label {
+    color: #ffffff;
+    background-image: linear-gradient(135deg, #97e3fe, #5eb5de);
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.08), 
+                -4px -4px 4px #ffffff,
+                inset 6px 6px 18px rgba(0, 0, 0, 0.15), 
+                inset -4px -4px 4px rgba(255, 255, 255, 0.3);
+}
+
+.rs-bar {
+    z-index: 0 !important;
+}
+
+.rs-tooltip-text {
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+    font-size: 52px !important;
+    border-radius: 50% !important;
+    background-image: linear-gradient(135deg, #97e3fe, #5eb3de);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 
+    -4px -4px 4px #ffffff;
+}
+
+.rs-tooltip-text:after {
+    content: "°";
+    position: relative !important;
+    font-size: 32px !important;
+    top: -14px !important;
+    margin-right: -8px !important;
+}
+
+.rs-handle {
+    background-color: #5eb3de !important;
+    border: 12px solid #ffffff !important;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2) !important ;
+}
+
+.misc {
+    display: flex;
+    margin: 36px 0 14px;
+}
+
+.misc .card {
+    width: 50%;
+    margin: 0 8px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background-image: linear-gradient(135deg, #f0f1fa, #f7f8fd);box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08), 
+                -4px -4px 4px #ffffff;
+}
+
+.misc .card p {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 6px;
+}
+
+.misc .card span {
+    font-size: 24px;
+    font-weight: 700;
 }
